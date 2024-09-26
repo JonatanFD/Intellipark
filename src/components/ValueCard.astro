@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  order: number;
+}
+
+const { description, image, title, order } = Astro.props;
+---
+
+<article
+  class="flex flex-col md:flex-row items-center gap-4 bg-white w-full max-w-[800px] shadow-lg mt-11 pb-16 md:pb-0"
+  class:list={order % 2 == 0 ? "" : "md:flex-row-reverse"}
+>
+  <img src={image} alt="Oferta de valor" class="w-[300px] h-auto" />
+  <div class="p-4 max-w-[300px] md:max-w-none">
+    <h3 class="my-4 text-2xl font-semibold">
+      {title}
+    </h3>
+    <p>{description}</p>
+  </div>
+</article>

@@ -1,0 +1,44 @@
+---
+import ValueCard from "./ValueCard.astro";
+
+const CARDS = [
+  {
+    title: "Indicador de Disponibilidad",
+    description:
+      "Muestra en tiempo real la disponibilidad de espacios en tu parking",
+    image: "/indicar_disponibilidad.png",
+  },
+  {
+    title: "Seguridad 24 horas",
+    description:
+      "Cámaras de seguridad y personal capacitado para garantizar la seguridad de tu parking",
+    image: "/camara_seguridad.png",
+  },
+  {
+    title: "Multiples métodos de pago",
+    description:
+      "Acepta pagos en efectivo, tarjeta de crédito y débito. También acepta pagos móviles",
+    image: "/metodos_de_pago.png",
+  },
+];
+---
+
+<section class="bg-[#F6F8F7]">
+  <main
+    class="max-w-7xl w-full py-20 mx-auto flex flex-col items-center gap-16 px-4 text-black"
+  >
+    <h2 class="text-5xl font-semibold text-center">¿Qué Ofrecemos?</h2>
+    <section>
+      {
+        CARDS.map(({ description, image, title }, index) => (
+          <ValueCard
+            description={description}
+            title={title}
+            image={image}
+            order={index}
+          />
+        ))
+      }
+    </section>
+  </main>
+</section>

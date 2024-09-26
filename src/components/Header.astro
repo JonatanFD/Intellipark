@@ -1,0 +1,31 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header class="w-full flex justify-center bg-slate-100 text-black h-16 fixed">
+  <main
+    class="max-w-7xl w-full py-3 flex items-center justify-between mx-auto px-4"
+  >
+    <section>
+      <Logo />
+    </section>
+
+    <ul class="hidden md:flex items-center gap-4 font-medium">
+      <li>
+        <a href="/" class="px-3 py-1 hover:text-blue-600 transition-colors"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a href="/" class="px-3 py-1 hover:text-blue-600 transition-colors"
+          >Nosotros</a
+        >
+      </li>
+      <li>
+        <a href="/" class="px-3 py-1 hover:text-blue-600 transition-colors"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </main>
+</header>

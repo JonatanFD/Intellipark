@@ -1,0 +1,62 @@
+---
+const REASONS = [
+  {
+    title: "Alto nivel de seguridad",
+    description:
+      "Nuestro sistema de parking cuenta con un alto nivel de seguridad para garantizar la integridad de los vehículos de tus clientes.",
+    icon: "/icons/SecurityIcon.svg",
+  },
+  {
+    title: "Cámaras de seguridad",
+
+    description:
+      "Contamos con cámaras de seguridad en todo el parking para garantizar la seguridad de los vehículos de tus clientes.",
+    icon: "/icons/CameraIcon.svg",
+  },
+  {
+    title: "Disponibilidad 24/7",
+    description:
+      "Nuestro parking está disponible las 24 horas del día, los 7 días de la semana para que tus clientes puedan acceder en cualquier momento.",
+    icon: "/icons/AvailabilityIcon.svg",
+  },
+  {
+    title: "Iluminación por movimiento",
+    description:
+      "Contamos con iluminación por movimiento para garantizar la seguridad de los vehículos de tus clientes durante la noche.",
+    icon: "./icons/LightIcon.svg",
+  },
+  {
+    title: "Flexibilidad de pago",
+    description:
+      "Ofrecemos flexibilidad de pago para que tus clientes puedan pagar de la forma que prefieran.",
+    icon: "./icons/PaymentIcon.svg",
+  },
+  {
+    title: "Tu información segura",
+    description:
+      "Garantizamos la seguridad de la información de tus clientes para que puedan sentirse seguros al dejar sus vehículos en tu parking.",
+    icon: "./icons/SecurityIcon.svg",
+  }
+];
+---
+
+<section class="bg-[#F6F8F7]">
+  <main
+    class="max-w-7xl w-full py-20 mx-auto flex flex-col items-center gap-16 px-4 text-black"
+  >
+    <h2 class="text-5xl font-semibold text-center">¿Por qué elegirnos?</h2>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {
+        REASONS.map((reason) => (
+          <div class="flex items-center gap-4 max-w-[600px] mx-auto bg-white shadow-md p-4 md:h-[200px]">
+            <img src={reason.icon} alt="Icon" class="w-[32px] h-auto" />
+            <div>
+              <h3 class="text-2xl font-semibold">{reason.title}</h3>
+              <p class="text-lg">{reason.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </main>
+</section>
