@@ -1,0 +1,30 @@
+---
+interface Props {
+    image: string;
+    name: string;
+    career: string;
+    description: string;
+}
+
+const { image, name, career, description } = Astro.props;
+
+---
+<div class="flex-shrink-0">
+    <img
+        src={image}
+        alt={name}
+        class="max-w-52"
+    />
+</div>
+
+<div class="text-left space-y-3 py-4 pr-4">
+    <h3 class="font-semibold">
+        {name}
+    </h3>
+    <p class="font-medium">
+        Carrera: {career}
+    </p>
+    <p class="font-medium">
+        {description}
+    </p>
+</div>

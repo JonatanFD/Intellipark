@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import TeamProfile from "../components/TeamProfile.astro";
 import Layout from "../layouts/Layout.astro";
 
 const alumnos = [
@@ -79,26 +80,8 @@ const alumnos = [
                     <ul class="flex flex-col gap-10 mx-auto">
                         {
                             alumnos.map((alumno) => (
-                                <li class="flex gap-4 mx-auto max-w-[800px] bg-white shadow-lg">
-                                    <div class="flex-shrink-0">
-                                        <img
-                                            src={alumno.image}
-                                            alt={alumno.name}
-                                            class="max-w-52"
-                                        />
-                                    </div>
-
-                                    <div class="text-left space-y-3 py-4 pr-4">
-                                        <h3 class="font-semibold">
-                                            {alumno.name}
-                                        </h3>
-                                        <p class="font-medium">
-                                            Carrera: {alumno.career}
-                                        </p>
-                                        <p class="font-medium">
-                                            {alumno.description}
-                                        </p>
-                                    </div>
+                                <li class="flex gap-4 mx-auto max-w-[800px] bg-white shadow-lg flex-col items-center md:flex-row ">
+                                   <TeamProfile image={alumno.image} name={alumno.name} career={alumno.career} description={alumno.description} />
                                 </li>
                             ))
                         }
