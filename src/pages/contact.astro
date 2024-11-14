@@ -1,0 +1,30 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.tsx";
+---
+
+<Layout title="Contact">
+    <main class="relative min-h-dvh h-full">
+        <Header />
+        <section class="bg-[#F2FBFF]">
+            <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
+                <section class="flex items-center flex-col gap-4 mx-auto pt-20">
+                    <h2 class="text-5xl font-semibold text-center">Contacto</h2>
+                    <p
+                        class="my-4 text-xl font-medium text-center max-w-[700px]"
+                    >
+                        Si tienes alguna pregunta o comentario, no dudes en
+                        ponerte en contacto con nosotros. Estaremos encantados
+                        de ayudarte.
+                    </p>
+                </section>
+            </main>
+        </section>
+
+        <ContactForm client:load />
+
+        <Footer />
+    </main>
+</Layout>

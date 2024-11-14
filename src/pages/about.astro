@@ -1,0 +1,112 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+const alumnos = [
+    {
+        name: "Jonatan Ariel Acuña Corahua",
+        code: "u20211b995",
+        career: "Ingeniería de Software",
+        image: "/jonatan.png",
+        description:
+            "Soy estudiante del 4to ciclo de la carrera de Ingeniería de Software en la UPC. Me gustó la carrera tras aprender desarrollo web y desde entonces, sigo aprendiendo para mejorar mis habilidades cada vez más. Me gusta aprender sobre las nuevas tecnologías de la web, jugar videojuegos y de vez en cuando salir en bicicleta.",
+    },
+    {
+        name: "David Fernando Contreras Leon",
+        code: "u20231b514",
+        career: "Ciencias de la computación",
+        image: "/david.png",
+        description:
+            "Estudio la carrera de ciencias de la computación en la UPC. Me gusta todo lo relacionado a la computación. Actualmente cuento con conocimientos del lenguaje C++ y, en aprendizaje aún, Python.",
+    },
+    {
+        name: "Santiago Alonso Gordillo Ramos",
+        code: "u202215160",
+        career: "Ingeniería de Software",
+        image: "/santiago.png",
+        description:
+            "Soy estudiante de la carrera de Ingeniería de Software. Me gustaría aprender más de este curso para poder desempeñarme satisfactoriamente en mi campo laboral. Me gusta jugar futbol, videojuegos y escuchar música para distraerme.",
+    },
+    {
+        name: "Sandro Figueroa Dextre",
+        code: "u202315077",
+        career: "Ciencias de la computación",
+        image: "/sandro.png",
+        description:
+            "Soy Sandro Figueroa Dextre, estudiante en cuarto ciclo de la UPC en la carrera de Ciencias de la Computación. Desde niño me ha gustado la tecnología y actualmente cuento con conocimientos en los lenguajes C++ y Python, y temas relacionados tanto en software como en hardware",
+    },
+    {
+        name: "Pierina Almandroz Carbajal",
+        code: "u202316845",
+        career: "Ingeniería de Software",
+        image: "/pierina.png",
+        description:
+            "Soy Pierina Almandroz Carbajal, estudiante de Ingeniería de Software. Siempre me llamó la atención la tecnología y lo relacionado a ella, por ello decidí encaminarme a una carrera relacionada a ello. Por el momento cuento con conocimientos en el lenguaje de C++.",
+    },
+];
+---
+
+<Layout title="Contact">
+    <main class="relative min-h-dvh h-full">
+        <Header />
+        <section class="bg-[#F2FBFF] w-full">
+            <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
+                <section class="flex items-center flex-col gap-4 mx-auto pt-20">
+                    <h2 class="text-5xl font-semibold text-center">Nosotros</h2>
+                    <p
+                        class="my-4 text-xl font-medium text-center max-w-[700px]"
+                    >
+                        Nos encargamos de modernizar el sistema de parking del
+                        Perú para que sea más eficiente y cómodo de usar.
+                        Mediante nuestro sistema automatizado de parking, podrás
+                        reservar un parking en cualquier lugar del país, con el
+                        fin de ahorrar tiempo y dinero.
+                    </p>
+                </section>
+            </main>
+        </section>
+
+        <section class="bg-[#F6F8F7] w-full">
+            <main class="max-w-7xl w-full mx-auto px-4 text-black">
+                <section
+                    class="flex items-center flex-col mx-auto py-20 gap-10"
+                >
+                    <h2 class="text-5xl font-semibold text-center">
+                        El Equipo
+                    </h2>
+
+                    <ul class="flex flex-col gap-10 mx-auto">
+                        {
+                            alumnos.map((alumno) => (
+                                <li class="flex gap-4 mx-auto max-w-[800px] bg-white shadow-lg">
+                                    <div class="flex-shrink-0">
+                                        <img
+                                            src={alumno.image}
+                                            alt={alumno.name}
+                                            class="max-w-52"
+                                        />
+                                    </div>
+
+                                    <div class="text-left space-y-3 py-4 pr-4">
+                                        <h3 class="font-semibold">
+                                            {alumno.name}
+                                        </h3>
+                                        <p class="font-medium">
+                                            Carrera: {alumno.career}
+                                        </p>
+                                        <p class="font-medium">
+                                            {alumno.description}
+                                        </p>
+                                    </div>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </section>
+            </main>
+        </section>
+
+        <Footer />
+    </main>
+</Layout>

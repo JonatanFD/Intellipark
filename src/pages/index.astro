@@ -7,102 +7,103 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="IntelliPark">
-  <main class="relative min-h-dvh h-full">
-    <Header />
+    <main class="relative min-h-dvh h-full">
+        <Header />
 
-    <section id="hero-image" class="h-[900px] flex items-center">
-      <main class="max-w-7xl w-full py-3 flex items-center mx-auto px-4">
-        <div class="text-center md:text-start text-white">
-          <h1 class="text-5xl font-semibold">
-            Mejora tu parking con IntelliPark
-          </h1>
-          <p class="my-4 text-xl font-medium">
-            Mejora la experiencia de tus clientes con nuestro sistema
-            automatizado de parking
-          </p>
-          <button
-            class="px-6 py-2 border border-[#e4e4e4] rounded-full hover:bg-[#e4e4e455] transition-colors"
-            >Saber más</button
-          >
-        </div>
-      </main>
-    </section>
-
-    <section class="bg-[#F2FBFF]">
-      <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
-        <section class="flex items-center flex-col max-w-[600px] gap-4 mx-auto">
-          <h2 class="text-5xl font-semibold text-center">
-            Reserva una asesoría personalizada
-          </h2>
-          <a
-            href="#"
-            class="px-6 py-2 border rounded-full bg-[#034792] text-white font-medium text-xl"
-          >
-            Contáctanos
-          </a>
+        <section id="hero-image" class="h-[900px] flex items-center">
+            <main class="max-w-7xl w-full py-3 flex items-center mx-auto px-4">
+                <div class="text-center md:text-start text-white">
+                    <h1 class="text-5xl font-semibold">
+                        Mejora tu parking con IntelliPark
+                    </h1>
+                    <p class="my-4 text-xl font-medium">
+                        Mejora la experiencia de tus clientes con nuestro
+                        sistema automatizado de parking
+                    </p>
+                    <a
+                        class="px-6 py-2 border border-[#e4e4e4] rounded-full hover:bg-[#e4e4e455] transition-colors"
+                        href="/#whatweoffer"
+                        >Saber más</a
+                    >
+                </div>
+            </main>
         </section>
-      </main>
-    </section>
 
-    <WhatWeOffer />
-
-    <section class="bg-[#F2FBFF]">
-      <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
-        <section class="flex items-center flex-col md:flex-row mx-auto w-fit">
-          <img
-            src="/app.png"
-            alt="App"
-            class="rounded-xl w-[300px] h-auto"
-          />
-
-          <div
-            class="max-w-[600px] md:ml-24 text-center mt-10 md:mt-0 md:text-left"
-          >
-            <h2 class="text-5xl font-semibold">Descarga nuestra app</h2>
-            <p class="my-4 text-xl font-medium">
-              Obten acceso a tu parking desde cualquier lugar, recibe
-              notificaciones en tiempo real y mucho más
-            </p>
-            <a
-              href="#"
-              class="px-6 py-2 border rounded-full bg-[#034792] text-white font-medium"
-            >
-              Conocer Más</a
-            >
-          </div>
+        <section class="bg-[#F2FBFF]">
+            <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
+                <section
+                    class="flex items-center flex-col max-w-[600px] gap-4 mx-auto"
+                >
+                    <h2 class="text-5xl font-semibold text-center">
+                        Reserva una asesoría personalizada
+                    </h2>
+                    <a
+                        href="/contact"
+                        class="px-6 py-2 border rounded-full bg-[#034792] text-white font-medium text-xl"
+                    >
+                        Contáctanos
+                    </a>
+                </section>
+            </main>
         </section>
-      </main>
-    </section>
 
-    <WhyUs />
+        <WhatWeOffer />
 
-    <Footer />
-  </main>
+        <section class="bg-[#F2FBFF]">
+            <main class="max-w-7xl w-full py-20 mx-auto px-4 text-black">
+                <section
+                    class="flex items-center flex-col md:flex-row mx-auto w-fit"
+                >
+                    <img
+                        src="/app.png"
+                        alt="App"
+                        class="rounded-xl w-[300px] h-auto"
+                    />
+
+                    <div
+                        class="max-w-[600px] md:ml-24 text-center mt-10 md:mt-0 md:text-left"
+                    >
+                        <h2 class="text-5xl font-semibold">
+                            Descarga nuestra app
+                        </h2>
+                        <p class="my-4 text-xl font-medium">
+                            Obten acceso a tu parking desde cualquier lugar,
+                            recibe notificaciones en tiempo real y mucho más
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <WhyUs />
+
+        <Footer />
+    </main>
 </Layout>
 
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+    :root {
+        color-scheme: light dark;
+    }
 
-  #hero-image {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.2)
-      ),
-      url("/parking_model.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+    #hero-image {
+        background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.9),
+                rgba(0, 0, 0, 0.2)
+            ),
+            url("/parking_model.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-  #hero-image::before {
-    width: 100dvw;
-    height: auto;
-    content: "";
-    background-color: blue;
-    position: absolute;
-    top: 0;
-  }
+    #hero-image::before {
+        width: 100dvw;
+        height: auto;
+        content: "";
+        background-color: blue;
+        position: absolute;
+        top: 0;
+    }
 </style>

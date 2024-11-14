@@ -3,85 +3,98 @@ import Logo from "./Logo.astro";
 ---
 
 <footer class="bg-[#010334] text-white">
-  <main
-    class="max-w-7xl w-full py-20 flex flex-col md:flex-row mx-auto px-4 gap-10 justify-between"
-  >
-    <section class="max-w-[500px] mb-10">
-      <Logo color="white" baseColor="white" />
-
-      <p class="mt-4">
-        IntelliPark es una empresa que se dedica a mejorar la experiencia de los
-        clientes en los parkings. Nuestro sistema automatizado de parking
-        permite a los clientes reservar su plaza de parking con antelación y
-        pagar de forma segura.
-      </p>
-    </section>
-
-    <section>
-      <h3 class="mb-4 text-2xl font-semibold">Contacto</h3>
-      <ul class="flex flex-col gap-3">
-        <li>
-          <p>Dirección: 123 Alguna direccion, Peru</p>
-        </li>
-        <li>
-          <p>Teléfono: 123 456 789</p>
-        </li>
-        <li>
-          <p>Email: intellimail@mail.com</p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3 class="mb-4 text-2xl font-semibold">Enlaces</h3>
-      <ul class="flex flex-col gap-3">
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Inicio</a>
-        </li>
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Servicios</a
-          >
-        </li>
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Contacto</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3 class="mb-4 text-2xl font-semibold">Redes sociales</h3>
-      <ul class="flex flex-col gap-3">
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Facebook</a>
-        </li>
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Twitter</a>
-        </li>
-        <li>
-          <a href="#" class="hover:text-blue-600 transition-colors">Instagram</a
-          >
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <section class="border-t border-[#717171]">
-    <section
-      class="max-w-7xl w-full py-6 flex flex-col mx-auto px-4 gap-4 md:flex-row-reverse"
+    <main
+        class="max-w-7xl w-full py-20 flex flex-col md:flex-row mx-auto px-4 gap-10 justify-between"
     >
-      <a class="hover:text-blue-600 transition-colors cursor-pointer">
-        Terminos y condiciones</a
-      >
+        <section class="max-w-[500px] mb-10">
+            <Logo color="white" baseColor="white" />
 
-      <span class="hidden md:inline">|</span>
+            <p class="mt-4">
+                IntelliPark es una empresa que se dedica a mejorar la
+                experiencia de los clientes en los parkings. Nuestro sistema
+                automatizado de parking permite a los clientes reservar su plaza
+                de parking con antelación y pagar de forma segura.
+            </p>
+        </section>
 
-      <a class="hover:text-blue-600 transition-colors cursor-pointer"
-        >Política de privacidad</a
-      >
-      <span class="hidden md:inline">|</span>
+        <section>
+            <h3 class="mb-4 text-2xl font-semibold">Contacto</h3>
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <p>Dirección: 123 Alguna direccion, Peru</p>
+                </li>
+                <li>
+                    <p>Teléfono: 123 456 789</p>
+                </li>
+                <li>
+                    <p>Email: intellimail@mail.com</p>
+                </li>
+            </ul>
+        </section>
 
-      <a class="hover:text-blue-600 transition-colors cursor-pointer">Cookies</a
-      >
+        <section>
+            <h3 class="mb-4 text-2xl font-semibold">Enlaces</h3>
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <a href="/" class="hover:text-blue-600 transition-colors"
+                        >Inicio</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/#whatweoffer"
+                        class="hover:text-blue-600 transition-colors"
+                        >Servicios</a
+                    >
+                </li>
+                <li>
+                    <a href="/contact" class="hover:text-blue-600 transition-colors"
+                        >Contacto</a
+                    >
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 class="mb-4 text-2xl font-semibold">Redes sociales</h3>
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <a href="#" class="hover:text-blue-600 transition-colors"
+                        >Facebook</a
+                    >
+                </li>
+                <li>
+                    <a href="#" class="hover:text-blue-600 transition-colors"
+                        >Twitter</a
+                    >
+                </li>
+                <li>
+                    <a href="#" class="hover:text-blue-600 transition-colors"
+                        >Instagram</a
+                    >
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="border-t border-[#717171]">
+        <section
+            class="max-w-7xl w-full py-6 flex flex-col mx-auto px-4 gap-4 md:flex-row-reverse"
+        >
+            <a class="hover:text-blue-600 transition-colors cursor-pointer">
+                Terminos y condiciones</a
+            >
+
+            <span class="hidden md:inline">|</span>
+
+            <a class="hover:text-blue-600 transition-colors cursor-pointer"
+                >Política de privacidad</a
+            >
+            <span class="hidden md:inline">|</span>
+
+            <a class="hover:text-blue-600 transition-colors cursor-pointer"
+                >Cookies</a
+            >
+        </section>
     </section>
-  </section>
 </footer>
